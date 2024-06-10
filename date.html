@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Invitation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            margin: 0;
+            background: url('shreya.jpg') no-repeat center center fixed; /* Background image */
+            background-size: cover; /* Ensure the background covers the whole page */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        
+        .background {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: inherit;
+            filter: blur(10px); /* Blur effect */
+            z-index: -1; /* Send to back */
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 20px;
+            width: 300px; /* Fixed width for better fit */
+            border-radius: 10px; /* Optional: Rounded corners */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Shadow for better look */
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            background-color: #ff69b4;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="shreya.jpg" alt="Shreya">
+        <h1>Hi Shreya, Date a jabi?</h1>
+        <button onclick="respond('yes')">Yes</button>
+        <button onclick="respond('no')">No</button>
+    </div>
+
+    <script>
+        function respond(answer) {
+            if (answer === 'yes') {
+                window.location.href = 'date_choice.html';
+            } else {
+                alert('I Love You!!! 😘😘,Please ha bol');
+            }
+        }
+    </script>
+</body>
+</html>

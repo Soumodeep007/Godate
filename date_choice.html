@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Type Selection</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            flex-direction: column;
+        }
+        .container {
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin: 10px;
+            border: none;
+            background-color: #ff69b4;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        button:hover {
+            background-color: #ff1493;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Which date?</h1>
+        <button id="bari" onclick="selectOption('bari')">Bari</button>
+        <button id="office" onclick="selectOption('office')">Office</button>
+        <button id="ghat" onclick="selectOption('ghat')">Ghat</button>
+        <button id="masir-dokan" onclick="selectOption('masir-dokan')">Masir Dokan</button>
+    </div>
+
+    <script>
+        function selectOption(option) {
+            const container = document.querySelector('.container');
+
+            if (option === 'ghat') {
+                alert("onek dur bristi na porle moja asbe na");
+                document.getElementById('ghat').style.display = 'none';
+            } else if (option === 'office') {
+                alert("dhur office e keu date kore naki");
+                document.getElementById('office').style.display = 'none';
+            } else if (option === 'masir-dokan') {
+                window.location.href = 'gorum.html';
+            } else if (option === 'bari') {
+                window.location.href = 'bari_date.html';
+                setTimeout(() => {
+                    window.location.href = 'bari_date.html';
+                }, 5000);
+            }
+        }
+    </script>
+</body>
+</html>
